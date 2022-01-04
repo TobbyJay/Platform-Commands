@@ -13,14 +13,17 @@ builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =
     options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection"));
 });
 
-builder.Services.AddDbContext<AppDbContext>(opt =>
-        opt.UseInMemoryDatabase("InMem"));
+//builder.Services.AddDbContext<AppDbContext>(opt =>
+//        opt.UseInMemoryDatabase("InMem"));
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -37,6 +40,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-PrepDb.PrepPopulation(app);
+//PrepDb.PrepPopulation(app);
 
 app.Run();
