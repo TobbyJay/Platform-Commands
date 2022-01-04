@@ -10,7 +10,7 @@ namespace PlatformService.Models
         [Required]
         public string? Name { get; set; }
         [Required]
-        public string? PhoneNumber { get; set; }
+        public string? Publisher { get; set; }
         [Required]
         public string? Cost { get; set; }
 
