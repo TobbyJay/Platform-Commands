@@ -1,5 +1,7 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+
+using AutoMapper;
+
 using PlatformService.Dtos;
 using PlatformService.Models;
 using PlatformService.Repository;

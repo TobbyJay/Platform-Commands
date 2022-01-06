@@ -1,7 +1,7 @@
-﻿using PlatformService.Dtos;
-
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
+
+using PlatformService.Dtos;
 
 namespace PlatformService.SyncDataServices.Http
 {
